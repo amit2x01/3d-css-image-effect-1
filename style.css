@@ -1,0 +1,53 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: #272727;
+	width: 100%;
+	height: 100vh;
+}
+
+.image{
+	position: relative;
+	width: 350px;
+	height: 350px;
+}
+
+.image img{
+	position:absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.image::after,
+.image::before{
+	content: '';
+	position: absolute;
+
+	left:-11px;
+	top: -11px;
+
+	width: 100%;
+	height: 100%;
+
+	transform: rotate(45deg);
+
+	border:10px solid white;
+}
+
+.image::after{
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+
+.image::before{
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
